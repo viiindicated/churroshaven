@@ -1,0 +1,623 @@
+#sitelogo {
+  max-width: 80%; /* Ensure the logo doesn't exceed its container */
+  height: auto; /* Maintain aspect ratio */
+  padding: 0px; /* Add padding around the logo */
+  display: block; /* Make sure it's a block-level element for center alignment */
+  margin: 0 auto; /* Center align the logo */
+  margin-left: 10px;
+}
+
+/* @media query for specific screen size */
+@media (max-width: 768px) {
+  /* Make the #sitelogo invisible */
+  #sitelogo {
+    display: none;
+  }
+}
+
+
+
+body {
+  font-family: var(--base-font-family);
+  background: url('/./images/churrosbg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+}
+
+@font-face {
+  font-family: 'Plain';
+  src: url('../localfonts/Plain-Regular.woff2') format('woff2'),
+       url('../localfonts/Plain-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plain';
+  src: url('../localfonts/Plain-Light.woff2') format('woff2'),
+       url('../localfonts/Plain-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Plain';
+  src: url('../localfonts/Plain-Bold.woff2') format('woff2'),
+       url('../localfonts/Plain-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+:root {
+  --light-background-image: url('/images/Background.jpg');
+  --dark-background-image: url('/images/HONEYCOMB\ BG\ BLACK.jpg');
+  --primary-color: #ffd500;
+  --secondary-color: orange;
+  --white-color: #ffffff;
+  --dark-color: #010101;
+  --menu-bg-color: #212529;
+  --gray-color: #909090;
+  --p-color: #7d7a7a;
+  --light-yellow-color: #fff66f;
+  --base-font-family: "Plain", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-weight-bold: 600;
+  --font-weight-normal: 400;
+  --font-weight-light: 300;
+  --h1-font-size: 56px;
+  --h2-font-size: 48px;
+  --h3-font-size: 38px;
+  --h4-font-size: 34px;
+  --h5-font-size: 30px;
+  --h6-font-size: 24px;
+  --p-font-size: 18px;
+  --base-font-size: 16px;
+  --button-font-size: 20px;
+  --border-radius-large: 100%;
+  --border-radius-medium: 80px;
+  --border-radius-small: 40px;
+}
+
+body.dark-theme {
+  background-image: var(--dark-background-image);
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed; 
+ /* text color */
+  color: var(--white-color);
+}
+
+
+body {
+  font-family: var(--base-font-family);
+  background-color: var(--white-color);
+}
+
+/*---------------------------------------
+   TYPOGRAPHY              
+-----------------------------------------*/
+
+h1 {
+  font-size: var(--h1-font-size);
+}
+
+h1,
+h3 {
+  font-weight: var(--font-weight-light);
+}
+
+h2 {
+  font-size: var(--h2-font-size);
+}
+
+h3 {
+  font-size: var(--h3-font-size);
+}
+
+h4 {
+  font-size: var(--h4-font-size);
+}
+
+h5 {
+  font-size: var(--h5-font-size);
+}
+
+h6 {
+  font-weight: var(--font-weight-bold);
+  font-size: var(--h6-font-size);
+}
+
+h7 {
+  font-weight: 600;
+  color: var(--primary-color);
+  top: 100px;
+  font-size: 30px;
+  margin-bottom: 5px;
+
+
+}
+
+p {
+  color: var(--p-color);
+  font-size: var(--p-font-size);
+  font-weight: var(--font-weight-light);
+  letter-spacing: 0.3px;
+  line-height: 2em;
+}
+
+.section-padding {
+  padding: 6rem 0;
+}
+
+.custom-icon {
+  font-size: 12px;
+  position: relative;
+  bottom: 36px;
+  left: 220px;
+  transform: rotate(-25deg);
+}
+
+/* CUSTOM BUTTON */
+.custom-btn {
+  background: var(--dark-color);
+  border: none;
+  border-radius: var(--border-radius-medium);
+  color: var(--white-color);
+  letter-spacing: 0.2px;
+  padding: 6px 36px 10px 36px;
+  font-size: var(--button-font-size);
+  white-space: nowrap;
+}
+
+.custom-btn:hover,
+.custom-btn:focus {
+  color: var(--dark-color);
+  background: var(--primary-color);
+}
+
+/*---------------------------------------
+   GENERAL               
+-----------------------------------------*/
+
+
+
+
+/* ICON */
+
+#icon {
+  width: 20px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: width 0.5s ease; /* Smooth transition effect for width change */
+}
+
+#icon.clicked {
+  transform: scale(1.5); /* scale on click */
+
+}
+
+/* ICON */
+
+
+
+
+
+/*---------------------------------------
+   CONTACT               
+-----------------------------------------*/
+
+/* CONTACT FORM */
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-align: center;
+  height: 100vh;
+  padding: 0 20px; /* Add horizontal padding */
+  border: 0px solid #e1d5c7;
+  margin: -95px;
+
+  max-width: 1200px; /* Set maximum width */
+  margin-left: auto; /* Align to the right */
+  margin-right: auto; /* Align to the left */
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 50px;
+}
+
+.form-group {
+  width: 100%; /* Ensure the form elements take up the full width */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.form-control {
+  width: 100%;
+  background-color: #f0f0f0; /* Background color */
+  border: 2px solid #ccc; /* Border color */
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 15px; /* Adjust padding as needed */
+  outline: none;
+  transition: border-color 0.3s; /* Transition for border color change */
+}
+
+.form-control:focus {
+  border-color: #816e4d; /* Change border color on focus */
+}
+
+.form-control::placeholder {
+  color: #ccc; /* Placeholder color */
+}
+
+.form-control[type="text"] {
+  background-color: #fff; /* Adjust background color for text input */
+}
+
+.contact-form input {
+  height: calc(2.25rem + 10px);
+}
+
+.contact-form .form-group {
+  margin: 0 0 1rem;
+  position: relative;
+}
+
+.contact-form .form-control,
+.webform-label {
+  transition: all 0.4s;
+  touch-action: manipulation;
+}
+
+.webform-label {
+  cursor: text;
+  font-size: 15px;
+  font-weight: var(--font-weight-light);
+  margin-bottom: 5px;
+}
+
+#submit-button {
+  background-color: #816e4d;
+  color: #ffffff;
+  font-size: 20px;
+  border: none; /* Remove border */
+  padding: 12px 24px; /* Adjust padding to increase button size */
+  border-radius: 20px; /* Adjust border radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for embossed effect */
+  transition: background-color 0.3s ease;
+}
+
+#submit-button:hover {
+  background-color: #605136;
+}
+
+.contact-form #submit-button:hover,
+.navbar .custom-btn:hover {
+  background: var(--dark-color);
+  color: var(--white-color);
+}
+
+.rounded-frame {
+  background-color: #e1d5c7;
+  border-radius: 20px;
+  padding: 30px; /* Adjust padding as needed */
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Adding shadow for depth */
+}
+
+#fbSecureBanner {
+  max-width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.banner-space {
+  display: block; /* Make it a block-level element */
+  height: 30px; /* Adjust height to add desired space */
+}
+
+.rounded-frame {
+  background-color: #e1d5c7;
+  border-radius: 20px;
+  padding: 70px; /* Adjust padding as needed */
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Adding shadow for depth */
+}
+
+/* Media Query for responsiveness */
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 0 10px; /* Reduce horizontal padding on smaller screens */
+    margin: -50px; /* Adjust margin on smaller screens */
+  }
+
+  .contact-form {
+    font-size: 40px; /* Reduce font size on smaller screens */
+  }
+
+  .form-control {
+    font-size: 18px; /* Reduce input font size on smaller screens */
+  }
+
+  .webform-label {
+    font-size: 12px; /* Reduce label font size on smaller screens */
+  }
+
+  #submit-button {
+    font-size: 18px; /* Reduce button font size on smaller screens */
+    padding: 10px 20px; /* Adjust button padding on smaller screens */
+  }
+
+  .rounded-frame {
+    padding: 20px; /* Adjust padding on smaller screens */
+  }
+}
+
+
+
+
+/* CONTACT FORM */
+
+/* paragraph */
+
+
+#paragraph {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px; /* Adjust padding as needed */
+}
+
+
+
+/* paragraph */
+
+/* anoymous */
+
+#anonymous {
+  width: 50px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Ensure it's displayed as a block element */
+  margin: 0 auto; /* Center the image horizontally */
+}
+
+#anonymous1 {
+  width: 100px; /* Adjust the width as needed */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* anoymous */
+
+
+
+/* footer */
+
+.footer {
+  padding: 20px; /* Adjust padding as needed */
+  border: 0px solid #ccc; /* Add border */
+  margin-top: 10px; /* Adjust margin as needed */
+
+  text-align: center;
+}
+
+/* footer */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*---------------------------------------
+   MOBILE RESPONSIVE STYLES              
+-----------------------------------------*/
+
+@media screen and (max-width: 1200px) {
+  h1 {
+      font-size: 42px;
+  }
+
+  h2 {
+      font-size: 36px;
+  }
+
+  h3 {
+      font-size: 32px;
+  }
+
+  h4 {
+      font-size: 28px;
+  }
+
+  .email-link {
+      font-size: 28px;
+  }
+}
+
+
+.contact {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  text-align: center;
+  height: 100vh;
+  padding: 0 20px; /* Add horizontal padding */
+  border: 0px solid #ccc;
+  margin: -95px;
+
+  max-width: 1200px; /* Set maximum width */
+  margin-left: auto; /* Align to the right */
+  margin-right: auto; /* Align to the left */
+}
+
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 50px;
+}
+
+.form-group {
+  width: 100%; /* Ensure the form elements take up the full width */
+  margin-bottom: 20px; /* Adjust margin as needed */
+}
+
+.form-control {
+  width: 100%;
+  background-color: #f0f0f0; /* Background color */
+  border: 2px solid #ccc; /* Border color */
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 15px; /* Adjust padding as needed */
+  outline: none;
+  transition: border-color 0.3s; /* Transition for border color change */
+}
+
+.form-control:focus {
+  border-color: #236be0; /* Change border color on focus */
+}
+
+.form-control::placeholder {
+  color: #ccc; /* Placeholder color */
+}
+
+.form-control[type="text"] {
+  background-color: #fff; /* Adjust background color for text input */
+}
+
+.contact-form input {
+  height: calc(2.25rem + 10px);
+}
+
+.contact-form .form-group {
+  margin: 0 0 1rem;
+  position: relative;
+}
+
+.contact-form .form-control,
+.webform-label {
+  transition: all 0.4s;
+  touch-action: manipulation;
+}
+
+.webform-label {
+  cursor: text;
+  font-size: 15px;
+  font-weight: var(--font-weight-light);
+  margin-bottom: 5px;
+}
+
+#submit-button {
+  background-color: #816e4d;
+  color: #ffffff;
+  font-size: 20px;
+  border: none; /* Remove border */
+  padding: 12px 24px; /* Adjust padding to increase button size */
+  border-radius: 20px; /* Adjust border radius for rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow for embossed effect */
+  transition: background-color 0.3s ease;
+}
+
+#submit-button:hover {
+  background-color: #61553f;
+}
+
+.contact-form #submit-button:hover,
+.navbar .custom-btn:hover {
+  background: var(--dark-color);
+  color: var(--white-color);
+}
+
+
+
+.rounded-frame {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 30px; /* Adjust padding as needed */
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Adding shadow for depth */
+}
+
+#fbSecureBanner {
+  width: 535px; /* Specify the width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.banner-space {
+  display: block; /* Make it a block-level element */
+  height: 30px; /* Adjust height to add desired space */
+}
+
+
+.rounded-frame {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 70px; /* Adjust padding as needed */
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1); /* Adding shadow for depth */
+}
+
+/* Media Query for responsiveness */
+
+@media (max-width: 768px) {
+  .contact {
+    padding: 0 5px; /* Reduce horizontal padding on smaller screens */
+    margin: 8px; /* Adjust margin on smaller screens */
+  }
+
+  .contact-form {
+    font-size: 40px; /* Reduce font size on smaller screens */
+
+    text-align: center;
+}
+  }
+
+  .form-control {
+    font-size: 15px; /* Reduce input font size on smaller screens */
+    padding: 8px 0px; /* Adjust input padding on smaller screens */
+  }
+  
+
+  .webform-label {
+    font-size: 16px; /* Reduce label font size on smaller screens */
+  }
+
+  #submit-button {
+    font-size: 18px; /* Reduce button font size on smaller screens */
+    padding: 10px 20px; /* Adjust button padding on smaller screens */
+  }
+
+  .rounded-frame {
+    padding: 20px; /* Adjust padding on smaller screens */
+  }
+
+
+
+
+
