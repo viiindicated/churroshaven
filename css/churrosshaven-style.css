@@ -510,7 +510,11 @@ p {
 }
 
 .form-control[type="text"] {
-  background-color: #fff; /* Adjust background color for text input */
+  background-color: #f0ece6; /* Adjust background color for text input */
+}
+
+.form-control[type="number"] {
+  background-color: #f0ece6; /* Adjust background color for text input */
 }
 
 .contact-form input {
